@@ -1,0 +1,236 @@
+.stay-reservation {
+  display: grid;
+  grid-template-areas:
+    "your-trip img-container"
+    "stay-details img-container"
+    "price-details img-container"
+    "btn btn";
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  height: fit-content;
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+  grid-column: 2;
+  grid-template-rows: 0.5fr 1fr 1fr 0.25fr;
+  grid-template-columns: 0.5fr 1fr;
+   
+
+
+  >* {
+    font-family: Airbnb-Cereal-Bold;
+    text-align: start;
+  }
+
+  // img {
+  //   width: em(150px);
+  //   height: em(90px);
+  // }
+
+  h1,
+  h3 {
+    color: black;
+  }
+
+  h2 {
+    color: #373737;
+  }
+
+  .your-trip {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-size: 16px;
+    grid-area: your-trip;
+  }
+
+  .reservation-details {
+    grid-area: stay-details;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items:f;
+    height: 100%;
+    width: 100%;
+
+    .h2 {
+    }
+
+    .text {
+      height: em(100px);
+      // display: grid;
+      // grid-template-areas:
+      //   "top"
+      //   "middle"
+      //   "review"
+      // ;
+      text-align: start;
+
+      & p {
+        margin: 0;
+        padding: 0;
+        padding-left: em(10px);
+        font-size: 16px;
+      }
+      
+      .review-text{
+        font-size: 14px;
+        line-height: 30px;
+      }
+
+    }
+
+  }
+  .img-container {
+    grid-area: img-container;
+    display: grid;
+    margin-left: auto;
+    grid-gap: 10px;
+    max-height: auto;
+    max-width: auto;
+    grid-template-areas:
+      "img0 img1"
+      "img2 img3";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+
+    .img0 {
+      border-radius: 8px 0px 0px 0px;
+      grid-area: img0;
+      width: 100%;
+      height: 100%;
+      
+      img{
+        border-radius: 8px 0px 0px 0px;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .img1 {
+      border-radius: 0px 8px 0px 0px;
+      grid-area: img1;
+      width: 100%;
+      height: 100%;
+      img{
+        border-radius: 0px 8px 0px 0px;
+        object-fit: cover;
+      width: 100%;
+        height: 100%;
+      }
+    }
+
+    .img2 {
+      border-radius: 0px 0px 0px 8px;
+      grid-area: img2;
+      width: 100%;
+      height: 100%;
+      img{
+        border-radius: 0px 0px 0px 8px;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .img3 {        
+      border-radius: 0px 0px 8px 0px;
+      grid-area: img3;
+      width: 100%;
+      height: 100%;
+      img{
+        border-radius: 0px 0px 8px 0px;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+  }
+
+  .price-details{
+    justify-content: start;
+    grid-area: price-details;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn-container {
+    margin-top: 32px !important;
+    grid-area: btn;
+    position: relative;
+    width: 40%;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    height: 48px;
+    padding: 0 0;
+    margin: 0 0;
+    // margin-bottom: 20px;
+    cursor: pointer;
+    border: none;
+    display: grid;
+    grid-template: repeat(10, 1fr) / repeat(10, 1fr);
+
+    @for $i from 0 to 10 {
+      .cell:nth-child(10n + #{$i + 1}):hover~.content {
+        --positionX: #{$i};
+      }
+
+      .cell:nth-child(n + #{10 * $i + 1}):nth-child(-n + #{10 * ($i + 1)}):hover~.content {
+        --positionY: #{$i};
+      }
+    }
+  }
+
+  .cell {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    // border: 1px solid rgba(128, 128, 128, 0.753);
+  }
+
+  .content {
+    --positionX: 0;
+    --positionY: 5;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: 8px;
+
+    background-image: radial-gradient(circle at calc((0 + var(--positionX, 0)) * 10%) calc((0 + var(--positionY, 0)) * 5%),
+        rgb(241, 37, 75) 0%,
+        rgb(230, 30, 77) 27.5%,
+        rgb(227, 28, 95) 40%,
+        rgb(215, 4, 102) 57.5%,
+        rgb(189, 30, 89) 75%,
+        rgb(189, 30, 89) 100%);
+  }
+
+  .action-btn {
+    padding: 0 0;
+    margin: 0 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+
+    .btn {
+      padding: 0 0;
+      margin: 0 0;
+      color: white;
+      font-size: medium;
+      line-height: 20px;
+      font-weight: 600;
+      font-family: Airbnb-Cereal-Book;
+    }
+  }
+}
