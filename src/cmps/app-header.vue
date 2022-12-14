@@ -13,7 +13,7 @@
 </template>
 <script>
 
-import { eventBus } from '../services/event-bus.service'
+
 
 export default {
   data(){
@@ -22,7 +22,6 @@ export default {
     }
   },
   created() {
-    eventBus.on('go-to-details',this.changeToDetailsHeader)
     
   },
   methods:{
