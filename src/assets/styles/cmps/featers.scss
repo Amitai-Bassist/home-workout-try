@@ -1,0 +1,33 @@
+.featers{
+    padding: 150px 100px;
+    background-color: $clr2;
+    color: $clr6;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    >*{
+        align-self: center;
+        justify-self: center;
+    }
+    >article{
+        display: flex;
+        flex-direction: column;
+        >h1{
+            width: 263px;
+            height: 24px;
+            font-family: "Raleway - Bold";
+            font-size: 20px;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: center;
+        }
+        >div{
+
+        }
+        >p{
+
+        }
+    }
+}

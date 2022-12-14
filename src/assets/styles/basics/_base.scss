@@ -2,13 +2,9 @@
     box-sizing: border-box;
 }
 
-::selection {
-    background-color: $clr1;
-    color: $clr6;
-}
 
 html {
-    font-family: Airbnb-Cereal-Book;
+    // font-family: Airbnb-Cereal-Book;
     line-height: 1.6;
     color: $clr2;
 }
@@ -19,22 +15,27 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Airbnb-Cereal-Book;
+    // font-family: Airbnb-Cereal-Book;
     margin: 0 0 0.6em;
     line-height: 1;
 }
 
+button{
+    width: 280px;
+    height: 56px;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 28px;
+    background-image: linear-gradient(152deg, #63e1d9 0%, #34a0cd 100%);
+}
+
 button, span, section, div {
-    font-family: Airbnb-Cereal-Book;
+    
 }
 
 section, main, footer {
     padding: 0px;
 }
 
-// img {
-//     width: 100%;
-// }
 
 p {
     margin: 0 0 1em;

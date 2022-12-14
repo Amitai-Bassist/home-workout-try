@@ -1,9 +1,6 @@
 <template>
-    <app-upper-header />
-    <app-second-header/>
-  <section >
-    <router-view/>
-  </section>
+  <app-header />
+  <router-view/>
   <app-footer/>
 </template>
 
@@ -11,7 +8,7 @@
 
 
 import { store } from './store/store'
-import appUpperHeader from './cmps/app-upper-header.vue'
+import appHeader from './cmps/app-header.vue'
 import appFooter from './cmps/app-footer.vue'
 
 
@@ -21,7 +18,7 @@ export default {
     console.log('Vue App created')
   },
   components: {
-    appUpperHeader,
+    appHeader,
     appFooter,
   },
 }

@@ -15,26 +15,15 @@
 
 // Components
 @import "cmps/app-header";
-@import "cmps/filter-modal";
-@import "cmps/app-header-filter";
-@import "cmps/app-second-header";
-@import "cmps/stay-preview";
-@import "cmps/user-msg";
-@import "cmps/review-list";
-@import "cmps/stay-list";
-@import "cmps/stay-reserve";
-@import "cmps/stay-imgs-preview";
-@import "cmps/stay-explore";
 @import "cmps/app-footer";
-@import "cmps/details-map";
-@import "cmps/details-who-search";
-@import "cmps/add-stay";
-@import "cmps/details-modal";
+@import "cmps/hero";
+@import "cmps/featers";
+@import "cmps/stay-productive";
+
 
 // Views
-@import "views/stay-reservation";
-@import "views/stay-app";
-@import "views/stay-details";
+@import "views/home";
+
 
 
 
